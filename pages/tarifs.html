@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Déclic Informatique - Tarifs - Trélazé Angers</title>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifs - Déclic Informatique</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="../assets/css/style.css">
 <style>body{font-family:Inter,sans-serif}.mono{font-family:'JetBrains Mono',monospace}</style>
-
 </head>
 <body class="bg-[#f8fafc] text-slate-900">
-
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
 <div class="max-w-6xl mx-auto px-4 md:px-6 h-[72px] flex items-center justify-between">
 <a href="../index.html" class="flex items-center gap-3">
@@ -24,86 +21,76 @@
 </a>
 <nav class="hidden md:flex items-center gap-1">
 <a href="../index.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Accueil</a>
-<a href="../qui-suis-je.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Qui suis-je</a>
-<a href="../tarifs.html" class="px-4 py-2 rounded-full font-semibold text-sm bg-slate-900 text-white">Tarifs</a>
-<a href="../contact.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Contact</a>
+<a href="qui-suis-je.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Qui suis-je</a>
+<a href="tarifs.html" class="px-4 py-2 rounded-full font-semibold text-sm bg-slate-900 text-white">Tarifs</a>
+<a href="contact.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Contact</a>
 </nav>
 <div class="flex items-center gap-2">
-<a href="../contact.html" class="bg-[#0e6bdf] text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-blue-700">Devis 20€</a>
+<a href="contact.html" class="bg-[#0e6bdf] text-white px-5 py-2.5 rounded-full font-bold text-sm">Devis 20€</a>
 <button id="burger" class="md:hidden p-2"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
 </div>
 </div>
 <div id="mobile" class="hidden md:hidden border-t bg-white px-4 py-3 space-y-1">
 <a href="../index.html" class="block px-3 py-2 rounded">Accueil</a>
-<a href="../qui-suis-je.html" class="block px-3 py-2 rounded">Qui suis-je</a>
-<a href="../tarifs.html" class="block px-3 py-2 rounded">Tarifs</a>
-<a href="../contact.html" class="block px-3 py-2 rounded">Contact</a>
+<a href="qui-suis-je.html" class="block px-3 py-2 rounded ">Qui suis-je</a>
+<a href="tarifs.html" class="block px-3 py-2 rounded">Tarifs</a>
+<a href="contact.html" class="block px-3 py-2 rounded">Contact</a>
 </div>
 </header>
-
 <main class="max-w-6xl mx-auto px-4 md:px-6">
 
 <div class="pt-10 md:pt-14 pb-12">
-<h1 class="text-4xl font-extrabold tracking-tight">Tarifs clairs</h1>
-<div class="mt-6 bg-[#0e6bdf] text-white rounded-2xl p-5 flex justify-between gap-3">
-<div><div class="font-extrabold text-lg">Diagnostic 20€ → déduit si intervention</div><div class="text-blue-100 text-sm">Conseil achat aussi déduit si install ensuite.</div></div>
+<h1 class="text-4xl font-extrabold">Tarifs clairs</h1>
+<div class="mt-6 bg-[#0e6bdf] text-white rounded-2xl p-5 flex justify-between">
+<div><div class="font-extrabold text-lg">Diagnostic 20€ → déduit</div><div class="text-blue-100 text-sm">Si intervention acceptée.</div></div>
 <div class="bg-white text-[#0e6bdf] px-4 py-2 rounded-full font-bold text-sm h-fit">Trélazé 0€ • Angers 5€</div>
 </div>
 <div class="mt-8 bg-white border rounded-2xl overflow-hidden">
-<div class="overflow-x-auto">
-<table class="w-full text-sm">
-<thead class="bg-slate-50 text-slate-500 mono text-xs uppercase"><tr><th class="text-left p-3">Prestation</th><th class="text-left p-3">Détail</th><th class="text-right p-3">Prix</th></tr></thead>
+<table class="w-full text-sm"><thead class="bg-slate-50 mono text-xs uppercase"><tr><th class="text-left p-3">Prestation</th><th class="text-left p-3">Détail</th><th class="text-right p-3">Prix</th></tr></thead>
 <tbody class="divide-y">
 <tr class="bg-blue-50/40"><td colspan="3" class="p-3 font-bold text-[#0e6bdf]">Services & assistance</td></tr>
-<tr><td class="p-3 font-semibold">Diagnostic simple</td><td class="p-3 text-slate-600">Analyse, vérifs de base, explication claire.</td><td class="p-3 text-right font-bold">20 €</td></tr>
-<tr><td class="p-3 font-semibold">Conseil achat</td><td class="p-3 text-slate-600">Besoin, budget, comparaison, reco.</td><td class="p-3 text-right font-bold">20 €</td></tr>
-<tr><td class="p-3 font-semibold">Installation logiciel / périphérique</td><td class="p-3 text-slate-600">Logiciel, imprimante, clavier, mail.</td><td class="p-3 text-right font-bold">25 €</td></tr>
-<tr><td class="p-3 font-semibold">Aide box / Wi-Fi / imprimante</td><td class="p-3 text-slate-600">Connexion, config, test réseau.</td><td class="p-3 text-right font-bold">30 €</td></tr>
+<tr><td class="p-3 font-semibold">Diagnostic simple</td><td class="p-3 text-slate-600">Analyse, vérifs, explication.</td><td class="p-3 text-right font-bold">20 €</td></tr>
+<tr><td class="p-3 font-semibold">Conseil achat</td><td class="p-3 text-slate-600">Besoin, budget, reco.</td><td class="p-3 text-right font-bold">20 €</td></tr>
+<tr><td class="p-3 font-semibold">Installation logiciel</td><td class="p-3 text-slate-600">Logiciel, imprimante, etc.</td><td class="p-3 text-right font-bold">25 €</td></tr>
+<tr><td class="p-3 font-semibold">Aide box / WiFi</td><td class="p-3 text-slate-600">Connexion, config.</td><td class="p-3 text-right font-bold">30 €</td></tr>
 <tr class="bg-slate-50"><td colspan="3" class="p-3 font-bold">Maintenance</td></tr>
-<tr><td class="p-3 font-semibold">Maintenance basique</td><td class="p-3 text-slate-600">Nettoyage léger, MAJ, sécu.</td><td class="p-3 text-right font-bold">35 €</td></tr>
-<tr><td class="p-3 font-semibold">Maintenance complète</td><td class="p-3 text-slate-600">Optimisation poussée, disque, températures.</td><td class="p-3 text-right font-bold">50 €</td></tr>
-<tr><td class="p-3 font-semibold">Sauvegarde / transfert</td><td class="p-3 text-slate-600">Selon volume/durée.</td><td class="p-3 text-right font-bold">30 €</td></tr>
+<tr><td class="p-3 font-semibold">Basique</td><td class="p-3 text-slate-600">Nettoyage léger.</td><td class="p-3 text-right font-bold">35 €</td></tr>
+<tr><td class="p-3 font-semibold">Complète</td><td class="p-3 text-slate-600">Optimisation poussée.</td><td class="p-3 text-right font-bold">50 €</td></tr>
+<tr><td class="p-3 font-semibold">Sauvegarde</td><td class="p-3 text-slate-600">Selon volume.</td><td class="p-3 text-right font-bold">30 €</td></tr>
 <tr class="bg-slate-50"><td colspan="3" class="p-3 font-bold">Windows</td></tr>
-<tr><td class="p-3 font-semibold">Install / réinstall Windows</td><td class="p-3 text-slate-600">Pilotes + MAJ. Licence non incluse.</td><td class="p-3 text-right font-bold">60 €</td></tr>
-<tr><td class="p-3 font-semibold">Windows + sauvegarde</td><td class="p-3 text-slate-600">Sauvegarde + install + pilotes.</td><td class="p-3 text-right font-bold">90 €</td></tr>
-<tr class="bg-blue-50/40"><td colspan="3" class="p-3 font-bold text-[#0e6bdf]">Montage PC — Garantie à vie</td></tr>
-<tr><td class="p-3 font-semibold">Montage pièces fournies</td><td class="p-3 text-slate-600">Assemblage + vérif BIOS.</td><td class="p-3 text-right font-bold">70 €</td></tr>
-<tr><td class="p-3 font-semibold">Montage + Windows</td><td class="p-3 text-slate-600">Montage + Windows + pilotes.</td><td class="p-3 text-right font-bold">100 €</td></tr>
-<tr><td class="p-3 font-semibold">Montage complet prêt</td><td class="p-3 text-slate-600">Montage + Windows + MAJ + logiciels + tests.</td><td class="p-3 text-right font-bold">120 €</td></tr>
+<tr><td class="p-3 font-semibold">Install Windows</td><td class="p-3 text-slate-600">Pilotes + MAJ. Licence non incluse.</td><td class="p-3 text-right font-bold">60 €</td></tr>
+<tr><td class="p-3 font-semibold">Windows + sauvegarde</td><td class="p-3 text-slate-600">Sauvegarde + install.</td><td class="p-3 text-right font-bold">90 €</td></tr>
+<tr class="bg-blue-50/40"><td colspan="3" class="p-3 font-bold text-[#0e6bdf]">Montage — Garantie à vie</td></tr>
+<tr><td class="p-3 font-semibold">Montage pièces fournies</td><td class="p-3 text-slate-600">Assemblage + BIOS.</td><td class="p-3 text-right font-bold">70 €</td></tr>
+<tr><td class="p-3 font-semibold">Montage + Windows</td><td class="p-3 text-slate-600">Montage + Windows.</td><td class="p-3 text-right font-bold">100 €</td></tr>
+<tr><td class="p-3 font-semibold">Montage complet</td><td class="p-3 text-slate-600">Montage + Windows + MAJ + tests.</td><td class="p-3 text-right font-bold">120 €</td></tr>
 <tr class="bg-slate-50"><td colspan="3" class="p-3 font-bold">Déplacement</td></tr>
 <tr><td class="p-3 font-semibold">Trélazé</td><td class="p-3 text-slate-600">Offert.</td><td class="p-3 text-right font-bold text-green-600">0 €</td></tr>
-<tr><td class="p-3 font-semibold">Angers / alentours</td><td class="p-3 text-slate-600">Selon distance.</td><td class="p-3 text-right font-bold">5 €</td></tr>
-<tr class="bg-green-50"><td class="p-3 font-semibold text-green-700">Remise conseil achat</td><td class="p-3 text-green-700">Si install/config ensuite.</td><td class="p-3 text-right font-bold text-green-700">-20 €</td></tr>
-</tbody>
-</table>
-</div>
+<tr><td class="p-3 font-semibold">Angers</td><td class="p-3 text-slate-600">Selon distance.</td><td class="p-3 text-right font-bold">5 €</td></tr>
+<tr class="bg-green-50"><td class="p-3 font-semibold text-green-700">Remise conseil</td><td class="p-3 text-green-700">Si install ensuite.</td><td class="p-3 text-right font-bold text-green-700">-20 €</td></tr>
+</tbody></table>
 </div>
 </div>
 
 </main>
-
 <footer class="border-t bg-white mt-12">
 <div class="max-w-6xl mx-auto px-4 md:px-6 py-8 grid md:grid-cols-[1.5fr_1fr_1fr] gap-6 text-sm">
 <div>
 <img src="../assets/images/logo-declic.png" class="h-10 mb-3">
 <div class="font-bold">Déclic Informatique</div>
 <div class="text-xs text-slate-500">Maintenance • Réparation • Conseil</div>
-<div class="mt-3 text-slate-600">Basé à Trélazé (49800) - Angers et alentours.<br>Autodidacte depuis Windows 95. Montage PC garanti à vie.</div>
 </div>
 <div>
-<div class="font-bold">Zone & mode</div>
-<div class="mt-2 text-slate-600 text-xs leading-relaxed">Trélazé, Angers, Les Ponts-de-Cé, Saint-Barthélemy, Brain, Écouflant.<br><br>Déplacement uniquement à domicile.<br>Pas d'accueil atelier.<br>Trélazé 0€ - Angers 5€</div>
+<div class="font-bold">Zone</div>
+<div class="mt-2 text-slate-600 text-xs">Trélazé 0€ - Angers 5€<br>Déplacement uniquement</div>
 </div>
 <div>
-<div class="font-bold">Contact rapide</div>
-<div class="mt-2 text-slate-600 text-xs leading-relaxed">💳 Espèces • PayPal • AlloVoisins<br>🕘 Lun-Sam 9h-19h<br>🔧 Diagnostic 20€ déduit</div>
+<div class="font-bold">Contact</div>
 <img src="../assets/images/qr-whatsapp.png" class="mt-3 w-28 rounded-xl border">
-<div class="text-[10px] text-slate-400 mt-1">Scanne pour WhatsApp</div>
 </div>
 </div>
-<div class="border-t text-center py-4 text-xs text-slate-400 mono">© 2026 Déclic Informatique - Trélazé (49)</div>
+<div class="border-t text-center py-4 text-xs text-slate-400 mono">© 2026 Déclic Informatique</div>
 </footer>
 <script src="../assets/js/main.js"></script>
-
 </body>
 </html>
