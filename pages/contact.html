@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Déclic Informatique - Contact - Trélazé Angers</title>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Déclic Informatique</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="../assets/css/style.css">
 <style>body{font-family:Inter,sans-serif}.mono{font-family:'JetBrains Mono',monospace}</style>
-
 </head>
 <body class="bg-[#f8fafc] text-slate-900">
-
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
 <div class="max-w-6xl mx-auto px-4 md:px-6 h-[72px] flex items-center justify-between">
 <a href="../index.html" class="flex items-center gap-3">
@@ -24,90 +21,74 @@
 </a>
 <nav class="hidden md:flex items-center gap-1">
 <a href="../index.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Accueil</a>
-<a href="../qui-suis-je.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Qui suis-je</a>
-<a href="../tarifs.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Tarifs</a>
-<a href="../contact.html" class="px-4 py-2 rounded-full font-semibold text-sm bg-slate-900 text-white">Contact</a>
+<a href="qui-suis-je.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Qui suis-je</a>
+<a href="tarifs.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Tarifs</a>
+<a href="contact.html" class="px-4 py-2 rounded-full font-semibold text-sm bg-slate-900 text-white">Contact</a>
 </nav>
 <div class="flex items-center gap-2">
-<a href="../contact.html" class="bg-[#0e6bdf] text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-blue-700">Devis 20€</a>
+<a href="contact.html" class="bg-[#0e6bdf] text-white px-5 py-2.5 rounded-full font-bold text-sm">Devis 20€</a>
 <button id="burger" class="md:hidden p-2"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
 </div>
 </div>
 <div id="mobile" class="hidden md:hidden border-t bg-white px-4 py-3 space-y-1">
 <a href="../index.html" class="block px-3 py-2 rounded">Accueil</a>
-<a href="../qui-suis-je.html" class="block px-3 py-2 rounded">Qui suis-je</a>
-<a href="../tarifs.html" class="block px-3 py-2 rounded">Tarifs</a>
-<a href="../contact.html" class="block px-3 py-2 rounded">Contact</a>
+<a href="qui-suis-je.html" class="block px-3 py-2 rounded ">Qui suis-je</a>
+<a href="tarifs.html" class="block px-3 py-2 rounded">Tarifs</a>
+<a href="contact.html" class="block px-3 py-2 rounded">Contact</a>
 </div>
 </header>
-
 <main class="max-w-6xl mx-auto px-4 md:px-6">
 
 <div class="pt-10 md:pt-14 pb-12 grid md:grid-cols-[1.1fr_0.9fr] gap-8">
 <div>
-<h1 class="text-4xl font-extrabold tracking-tight">On règle ça ensemble ?</h1>
+<h1 class="text-4xl font-extrabold">On règle ça ensemble ?</h1>
 <p class="mt-2 text-slate-600">Diagnostic 20€ déduit si intervention. Déplacement uniquement.</p>
 <form onsubmit="event.preventDefault(); document.getElementById('ok').classList.remove('hidden')" class="mt-6 bg-white border rounded-2xl p-5 space-y-4">
-<div class="grid grid-cols-2 gap-3">
 <input placeholder="Nom" required class="border rounded-xl px-4 py-3 w-full">
-<input placeholder="Téléphone" class="border rounded-xl px-4 py-3 w-full">
-</div>
+<input placeholder="Tel" class="border rounded-xl px-4 py-3 w-full">
 <input placeholder="Email" type="email" required class="border rounded-xl px-4 py-3 w-full">
-<select class="border rounded-xl px-4 py-3 w-full">
-<option>Diagnostic simple - 20€</option>
-<option>Conseil achat - 20€</option>
-<option>Maintenance PC</option>
-<option>Installation Windows</option>
-<option>Montage PC sur-mesure</option>
-</select>
-<textarea placeholder="PC tour/portable, symptômes..." rows="4" class="border rounded-xl px-4 py-3 w-full"></textarea>
+<select class="border rounded-xl px-4 py-3 w-full"><option>Diagnostic 20€</option><option>Conseil achat</option><option>Maintenance</option><option>Montage</option></select>
+<textarea placeholder="Symptômes..." rows="4" class="border rounded-xl px-4 py-3 w-full"></textarea>
 <button class="w-full bg-[#0e6bdf] text-white py-3 rounded-full font-bold">Envoyer</button>
-<div id="ok" class="hidden bg-green-50 text-green-700 p-3 rounded-xl text-sm font-semibold">✅ Reçu ! Je te recontacte vite.</div>
+<div id="ok" class="hidden bg-green-50 text-green-700 p-3 rounded-xl text-sm">✅ Reçu !</div>
 </form>
 </div>
 <div class="space-y-4">
 <div class="bg-white border rounded-2xl p-5">
 <div class="font-bold">Infos</div>
-<div class="mt-3 text-sm space-y-2 text-slate-600">
-<div>Basé à <b>Trélazé (49800)</b></div>
+<div class="mt-3 text-sm text-slate-600 space-y-1">
+<div>Trélazé (49800)</div>
 <div>Déplacement uniquement</div>
-<div>🕘 Lun-Sam 9h-19h</div>
-<div>💳 Espèces • PayPal • AlloVoisins</div>
-<div>🚗 Trélazé 0€ - Angers 5€</div>
+<div>Lun-Sam 9h-19h</div>
+<div>Espèces • PayPal • AlloVoisins</div>
 </div>
 </div>
 <div class="bg-white border rounded-2xl p-5 text-center">
 <div class="font-bold">WhatsApp direct</div>
-<p class="text-xs text-slate-500 mt-1">Scanne le QR code que tu m'as donné</p>
-<img src="../assets/images/qr-whatsapp.png" class="w-52 mx-auto mt-3 rounded-xl border shadow-sm">
+<img src="../assets/images/qr-whatsapp.png" class="w-52 mx-auto mt-3 rounded-xl border">
 </div>
 </div>
 </div>
 
 </main>
-
 <footer class="border-t bg-white mt-12">
 <div class="max-w-6xl mx-auto px-4 md:px-6 py-8 grid md:grid-cols-[1.5fr_1fr_1fr] gap-6 text-sm">
 <div>
 <img src="../assets/images/logo-declic.png" class="h-10 mb-3">
 <div class="font-bold">Déclic Informatique</div>
 <div class="text-xs text-slate-500">Maintenance • Réparation • Conseil</div>
-<div class="mt-3 text-slate-600">Basé à Trélazé (49800) - Angers et alentours.<br>Autodidacte depuis Windows 95. Montage PC garanti à vie.</div>
 </div>
 <div>
-<div class="font-bold">Zone & mode</div>
-<div class="mt-2 text-slate-600 text-xs leading-relaxed">Trélazé, Angers, Les Ponts-de-Cé, Saint-Barthélemy, Brain, Écouflant.<br><br>Déplacement uniquement à domicile.<br>Pas d'accueil atelier.<br>Trélazé 0€ - Angers 5€</div>
+<div class="font-bold">Zone</div>
+<div class="mt-2 text-slate-600 text-xs">Trélazé 0€ - Angers 5€<br>Déplacement uniquement</div>
 </div>
 <div>
-<div class="font-bold">Contact rapide</div>
-<div class="mt-2 text-slate-600 text-xs leading-relaxed">💳 Espèces • PayPal • AlloVoisins<br>🕘 Lun-Sam 9h-19h<br>🔧 Diagnostic 20€ déduit</div>
+<div class="font-bold">Contact</div>
 <img src="../assets/images/qr-whatsapp.png" class="mt-3 w-28 rounded-xl border">
-<div class="text-[10px] text-slate-400 mt-1">Scanne pour WhatsApp</div>
 </div>
 </div>
-<div class="border-t text-center py-4 text-xs text-slate-400 mono">© 2026 Déclic Informatique - Trélazé (49)</div>
+<div class="border-t text-center py-4 text-xs text-slate-400 mono">© 2026 Déclic Informatique</div>
 </footer>
 <script src="../assets/js/main.js"></script>
-
 </body>
 </html>
