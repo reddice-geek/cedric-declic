@@ -1,0 +1,21 @@
+{
+  "site": "Declic Informatique",
+  "base": "Trelaze 49800",
+  "zone": [
+    "Trelaze",
+    "Angers",
+    "Les Ponts-de-Ce",
+    "Saint-Barthelemy"
+  ],
+  "diagnostic": 20,
+  "deplacement": {
+    "trelaze": 0,
+    "angers": 5
+  },
+  "paiements": [
+    "especes",
+    "paypal",
+    "allovoisins"
+  ],
+  "contact_mode": "deplacement_uniquement"
+}

@@ -1,0 +1,1 @@
+document.getElementById('burger')?.addEventListener('click',()=>{document.getElementById('mobile').classList.toggle('hidden')})
