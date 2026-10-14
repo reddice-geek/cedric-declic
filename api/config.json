@@ -1,21 +1,35 @@
 {
-  "site": "Declic Informatique",
-  "base": "Trelaze 49800",
+  "site": "Déclic Informatique",
+  "base": "Bourges 18000",
+  "adresse": "Bourges (18) - Cher",
+  "telephone": "07 83 20 87 86",
+  "telephone_international": "+33783208786",
+  "whatsapp": "https://wa.me/33783208786",
   "zone": [
-    "Trelaze",
-    "Angers",
-    "Les Ponts-de-Ce",
-    "Saint-Barthelemy"
+    "Bourges",
+    "Saint-Doulchard",
+    "Saint-Germain-du-Puy",
+    "La Chapelle-Saint-Ursin",
+    "Marmagne",
+    "Trouy",
+    "Plaimpied-Givaudins"
   ],
+  "zone_rayon_km": 15,
   "diagnostic": 20,
   "deplacement": {
-    "trelaze": 0,
-    "angers": 5
+    "bourges": 0,
+    "alentours_15km": 5,
+    "au_dela": "sur_devis"
   },
   "paiements": [
     "especes",
-    "paypal",
-    "allovoisins"
+    "paypal"
   ],
-  "contact_mode": "deplacement_uniquement"
+  "contact_mode": "deplacement_uniquement",
+  "horaires": "Lun-Sam 9h-19h",
+  "seo": {
+    "city": "Bourges",
+    "postcode": "18000",
+    "department": "Cher (18)"
+  }
 }
