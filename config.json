@@ -1,0 +1,35 @@
+{
+  "site": "Déclic Informatique",
+  "base": "Bourges 18000",
+  "adresse": "Bourges (18) - Cher",
+  "telephone": "07 83 20 87 86",
+  "telephone_international": "+33783208786",
+  "whatsapp": "https://wa.me/33783208786",
+  "zone": [
+    "Bourges",
+    "Saint-Doulchard",
+    "Saint-Germain-du-Puy",
+    "La Chapelle-Saint-Ursin",
+    "Marmagne",
+    "Trouy",
+    "Plaimpied-Givaudins"
+  ],
+  "zone_rayon_km": 15,
+  "diagnostic": 20,
+  "deplacement": {
+    "bourges": 0,
+    "alentours_15km": 5,
+    "au_dela": "sur_devis"
+  },
+  "paiements": [
+    "especes",
+    "paypal"
+  ],
+  "contact_mode": "deplacement_uniquement",
+  "horaires": "Lun-Sam 9h-19h",
+  "seo": {
+    "city": "Bourges",
+    "postcode": "18000",
+    "department": "Cher (18)"
+  }
+}
