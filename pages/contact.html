@@ -2,243 +2,351 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contactez Déclic Informatique à Bourges. Devis 20€ déductibles, diagnostic à domicile. Tel 07 83 20 87 86">
+<title>Contact - Déclic Informatique - Bourges</title>
 
-    <title>Contact - Déclic Informatique</title>
-    <meta
-        name="description"
-        content="Contactez Déclic Informatique pour votre dépannage, réparation et assistance informatique."
-    >
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
 
-    <link rel="stylesheet" href="../assets/css/style.css">
+<style>
+body {
+    font-family: Inter, sans-serif;
+}
 
-    <style>
-        .contact-container {
-            max-width: 720px;
-            margin: 40px auto;
-            padding: 24px;
-        }
-
-        .contact-form {
-            display: grid;
-            gap: 16px;
-        }
-
-        .contact-form label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .contact-form input,
-        .contact-form select,
-        .contact-form textarea {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #aaa;
-            border-radius: 6px;
-            font: inherit;
-        }
-
-        .contact-form textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        #submitBtn {
-            padding: 13px 18px;
-            border: 0;
-            border-radius: 6px;
-            cursor: pointer;
-            font: inherit;
-            font-weight: 700;
-        }
-
-        #submitBtn:disabled {
-            opacity: 0.6;
-            cursor: wait;
-        }
-
-        .form-message {
-            padding: 12px;
-            margin: 0;
-            border-radius: 6px;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        #ok {
-            color: #155724;
-            background: #d4edda;
-        }
-
-        #formError {
-            color: #721c24;
-            background: #f8d7da;
-        }
-    </style>
+.mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+</style>
 </head>
 
-<body>
-    <main class="contact-container">
-        <h1>Contacter Déclic Informatique</h1>
+<body class="bg-[#f8fafc] text-slate-900">
 
-        <p>
-            Décris ton besoin et je te répondrai dès que possible.
-            Les champs marqués d'un astérisque (*) sont obligatoires.
-        </p>
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 h-[72px] flex items-center justify-between">
 
-        <form id="contactForm" class="contact-form">
-            <div>
-                <label for="nom">Nom et prénom *</label>
+        <a href="../index.html" class="flex items-center gap-3">
+            <img src="../assets/images/logo-declic.png" class="h-11 w-auto" alt="Déclic Informatique">
+
+            <div class="leading-none hidden md:block">
+                <div class="font-extrabold text-[16px] tracking-tight">Déclic Informatique</div>
+                <div class="text-[11px] text-slate-500 font-semibold tracking-widest">
+                    MAINTENANCE • RÉPARATION • CONSEIL
+                </div>
+            </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-1">
+            <a href="../index.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Accueil</a>
+            <a href="qui-suis-je.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Qui suis-je</a>
+            <a href="tarifs.html" class="px-4 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Tarifs</a>
+            <a href="contact.html" class="px-4 py-2 rounded-full font-semibold text-sm bg-slate-900 text-white">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+            <a href="tel:+33783208786" class="hidden md:inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-full font-bold text-sm hover:bg-slate-50">
+                📞 07 83 20 87 86
+            </a>
+
+            <a href="contact.html" class="bg-yellow-400 text-slate-900 px-5 py-2.5 rounded-full font-bold text-sm hover:bg-yellow-500">
+                Devis 20€
+            </a>
+
+            <button id="burger" class="md:hidden p-2" type="button" aria-label="Ouvrir le menu" aria-controls="mobile" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile" class="hidden md:hidden border-t bg-white px-4 py-3 space-y-1">
+        <a href="../index.html" class="block px-3 py-2 rounded">Accueil</a>
+        <a href="qui-suis-je.html" class="block px-3 py-2 rounded">Qui suis-je</a>
+        <a href="tarifs.html" class="block px-3 py-2 rounded">Tarifs</a>
+        <a href="contact.html" class="block px-3 py-2 rounded bg-slate-100">Contact</a>
+        <a href="tel:+33783208786" class="block px-3 py-2 rounded font-bold">📞 07 83 20 87 86</a>
+    </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 md:px-6">
+    <div class="pt-10 md:pt-14 pb-12 grid md:grid-cols-[1.1fr_0.9fr] gap-8">
+
+        <div>
+            <h1 class="text-4xl font-extrabold">On règle ça ensemble ?</h1>
+
+            <p class="mt-2 text-slate-600">
+                Diagnostic 20€ déduit si intervention. Basé à Bourges - déplacement uniquement.
+                <br>
+                <a href="tel:+33783208786" class="font-bold text-violet-600 hover:underline">
+                    📞 07 83 20 87 86
+                </a>
+            </p>
+
+            <form id="contactForm" class="mt-6 bg-yellow-50/50 border border-yellow-200 rounded-2xl p-6 space-y-4">
+
                 <input
-                    type="text"
                     id="nom"
                     name="nom"
                     autocomplete="name"
+                    placeholder="Nom"
                     required
                     maxlength="150"
+                    class="border rounded-xl px-4 py-3 w-full outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 transition-all bg-white"
                 >
-            </div>
 
-            <div>
-                <label for="tel">Téléphone</label>
                 <input
-                    type="tel"
                     id="tel"
                     name="tel"
                     autocomplete="tel"
+                    type="tel"
+                    placeholder="Téléphone (facultatif)"
                     maxlength="30"
+                    class="border rounded-xl px-4 py-3 w-full outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 transition-all bg-white"
                 >
-            </div>
 
-            <div>
-                <label for="email">Adresse e-mail *</label>
                 <input
-                    type="email"
                     id="email"
                     name="email"
                     autocomplete="email"
+                    placeholder="Email"
+                    type="email"
                     required
                     maxlength="254"
+                    class="border rounded-xl px-4 py-3 w-full outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 transition-all bg-white"
                 >
-            </div>
 
-            <div>
-                <label for="sujet">Objet de la demande</label>
-                <select id="sujet" name="sujet">
-                    <option value="Diagnostic 20€">Diagnostic informatique</option>
-                    <option value="Dépannage informatique">Dépannage informatique</option>
-                    <option value="Installation Windows">Installation Windows</option>
-                    <option value="Montage PC">Montage PC</option>
-                    <option value="Conseil achat PC">Conseil pour acheter un PC</option>
-                    <option value="Entretien informatique">Entretien informatique</option>
-                    <option value="Autre demande">Autre demande</option>
+                <select
+                    id="sujet"
+                    name="sujet"
+                    class="border rounded-xl px-4 py-3 w-full outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 transition-all bg-white"
+                >
+                    <option value="Diagnostic 20€">Diagnostic 20€</option>
+                    <option value="Conseil achat">Conseil achat</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Montage">Montage</option>
                 </select>
-            </div>
 
-            <div>
-                <label for="message">Description de ta demande *</label>
                 <textarea
                     id="message"
                     name="message"
                     required
                     maxlength="10000"
+                    placeholder="Symptômes, modèle PC, ce que vous faites avec..."
+                    rows="4"
+                    class="border rounded-xl px-4 py-3 w-full outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-100 transition-all bg-white"
                 ></textarea>
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                    class="w-full bg-yellow-400 hover:bg-yellow-500 text-slate-900 py-3 rounded-full font-bold transition-colors cursor-pointer disabled:opacity-60 disabled:cursor-wait"
+                >
+                    Envoyer la demande
+                </button>
+
+                <div
+                    id="ok"
+                    role="status"
+                    aria-live="polite"
+                    class="hidden bg-green-50 border border-green-200 text-green-700 p-4 rounded-xl text-sm font-medium"
+                ></div>
+
+                <div
+                    id="formError"
+                    role="alert"
+                    aria-live="assertive"
+                    class="hidden bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl text-sm font-medium"
+                ></div>
+            </form>
+
+            <div class="mt-4 flex gap-3">
+                <a href="tel:+33783208786" class="flex-1 bg-slate-900 text-white text-center py-3 rounded-full font-bold">
+                    Appeler maintenant
+                </a>
+
+                <a href="https://wa.me/33783208786" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-500 text-white text-center py-3 rounded-full font-bold">
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <div class="bg-white border rounded-2xl p-5">
+                <div class="font-bold">Infos pratiques</div>
+
+                <div class="mt-3 text-sm text-slate-600 space-y-2">
+                    <div class="flex items-center gap-2">
+                        <span class="text-violet-600">📍</span>
+                        Bourges (18000)
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <span class="text-violet-600">📞</span>
+                        <a href="tel:+33783208786" class="font-bold hover:text-violet-600">07 83 20 87 86</a>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <span class="text-blue-600">🚗</span>
+                        Déplacement uniquement
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <span class="text-emerald-600">🕘</span>
+                        Lun-Sam 9h-19h
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <span class="text-yellow-500">💳</span>
+                        Espèces • PayPal
+                    </div>
+                </div>
             </div>
 
-            <p
-                id="ok"
-                class="form-message hidden"
-                role="status"
-                aria-live="polite"
-            ></p>
+            <div class="bg-white border rounded-2xl p-5 text-center">
+                <div class="font-bold mb-3">WhatsApp direct</div>
 
-            <p
-                id="formError"
-                class="form-message hidden"
-                role="alert"
-                aria-live="assertive"
-            ></p>
+                <img
+                    src="../assets/images/qr-whatsapp.png"
+                    class="w-48 mx-auto rounded-xl border"
+                    alt="QR Code WhatsApp"
+                >
 
-            <button type="submit" id="submitBtn">
-                Envoyer la demande
-            </button>
-        </form>
-    </main>
+                <div class="text-xs text-slate-500 mt-2">
+                    ou 07 83 20 87 86
+                </div>
+            </div>
+        </div>
 
-    <script>
-    (() => {
-        const form = document.getElementById("contactForm");
-        const okDiv = document.getElementById("ok");
-        const errorDiv = document.getElementById("formError");
-        const submitBtn = document.getElementById("submitBtn");
+    </div>
+</main>
 
-        if (!form || !okDiv || !errorDiv || !submitBtn) {
-            console.error("Formulaire de contact : élément HTML manquant.");
-            return;
+<footer class="border-t bg-white mt-12">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 py-8 grid md:grid-cols-[1.5fr_1fr_1fr] gap-6 text-sm">
+
+        <div>
+            <img src="../assets/images/logo-declic.png" class="h-10 mb-3" alt="Logo Déclic Informatique">
+            <div class="font-bold">Déclic Informatique</div>
+            <div class="text-xs text-slate-500">Maintenance • Réparation • Conseil</div>
+            <div class="mt-2 text-xs text-slate-600">
+                <a href="tel:+33783208786" class="font-bold">07 83 20 87 86</a> - Bourges
+            </div>
+        </div>
+
+        <div>
+            <div class="font-bold">Zone</div>
+            <div class="mt-2 text-slate-600 text-xs">
+                Bourges 0€ - Alentours 5%<br>
+                Déplacement uniquement
+            </div>
+        </div>
+
+        <div>
+            <div class="font-bold">Contact</div>
+            <img src="../assets/images/qr-whatsapp.png" class="mt-3 w-20 rounded-xl border" alt="WhatsApp">
+        </div>
+    </div>
+
+    <div class="border-t text-center py-4 text-xs text-slate-400 mono">
+        © 2026 Déclic Informatique - Bourges
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Menu mobile
+    const burger = document.getElementById("burger");
+    const mobile = document.getElementById("mobile");
+
+    if (burger && mobile) {
+        burger.addEventListener("click", () => {
+            mobile.classList.toggle("hidden");
+
+            burger.setAttribute(
+                "aria-expanded",
+                String(!mobile.classList.contains("hidden"))
+            );
+        });
+    }
+
+    // Formulaire : un seul gestionnaire d'envoi.
+    const form = document.getElementById("contactForm");
+    const okDiv = document.getElementById("ok");
+    const errorDiv = document.getElementById("formError");
+    const submitBtn = document.getElementById("submitBtn");
+
+    if (!form || !submitBtn) return;
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        if (submitBtn.disabled) return;
+
+        if (okDiv) {
+            okDiv.textContent = "";
+            okDiv.classList.add("hidden");
         }
 
-        form.addEventListener("submit", async (event) => {
-            event.preventDefault();
-
-            okDiv.textContent = "";
+        if (errorDiv) {
             errorDiv.textContent = "";
-            okDiv.classList.add("hidden");
             errorDiv.classList.add("hidden");
+        }
 
-            submitBtn.disabled = true;
-            submitBtn.textContent = "Envoi en cours...";
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Envoi en cours...";
 
-            try {
-                const formData = new FormData(form);
-                const donnees = Object.fromEntries(formData.entries());
+        try {
+            const donnees = Object.fromEntries(
+                new FormData(form).entries()
+            );
 
-                const response = await fetch("/api/contact", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Accept": "application/json"
-                    },
-                    body: JSON.stringify(donnees)
-                });
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(donnees)
+            });
 
-                // Certaines erreurs serveur peuvent ne pas renvoyer du JSON.
-                const result = await response.json().catch(() => null);
+            const result = await response.json().catch(() => null);
 
-                if (!response.ok || !result || result.success !== true) {
-                    throw new Error(
-                        result?.error ||
-                        result?.message ||
-                        `Le serveur a répondu avec le statut ${response.status}.`
-                    );
-                }
+            if (!response.ok || !result || result.success !== true) {
+                throw new Error(
+                    result?.error ||
+                    result?.message ||
+                    `Erreur du serveur (HTTP ${response.status}).`
+                );
+            }
 
+            if (okDiv) {
                 okDiv.textContent =
-                    "Merci ! Ta demande a bien été enregistrée.";
-
+                    "✅ Merci ! Votre demande a bien été enregistrée. Je vous recontacterai au plus vite.";
                 okDiv.classList.remove("hidden");
-                form.reset();
+            }
 
-            } catch (error) {
-                console.error("Envoi du formulaire :", error);
+            form.reset();
 
+        } catch (error) {
+            console.error("Erreur du formulaire de contact :", error);
+
+            if (errorDiv) {
                 errorDiv.textContent =
-                    error.message ||
-                    "Impossible de confirmer l'envoi. Réessaie ou contacte-moi directement au 07 83 20 87 86.";
+                    (error.message || "Une erreur est survenue lors de l'envoi.") +
+                    " Vous pouvez également me joindre au 07 83 20 87 86.";
 
                 errorDiv.classList.remove("hidden");
-
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = "Envoyer la demande";
             }
-        });
-    })();
-    </script>
+
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Envoyer la demande";
+        }
+    });
+});
+</script>
+
 </body>
 </html>
