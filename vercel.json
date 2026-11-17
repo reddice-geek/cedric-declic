@@ -2,6 +2,9 @@
   "functions": {
     "api/contact.js": {
       "maxDuration": 10
+    },
+    "api/avis.js": {
+      "maxDuration": 10
     }
   }
 }

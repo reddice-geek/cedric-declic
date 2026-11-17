@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Consultez les avis clients de Déclic Informatique à Bourges et partagez votre expérience.">
+<title>Avis clients - Déclic Informatique - Bourges</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+body { font-family: Inter, sans-serif; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.rating-stars { letter-spacing: .12em; }
+</style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900">
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 h-[72px] flex items-center justify-between">
+        <a href="../index.html" class="flex items-center gap-3">
+            <img src="../assets/images/logo-declic.png" class="h-11 w-auto" alt="Déclic Informatique">
+            <div class="leading-none hidden md:block">
+                <div class="font-extrabold text-[16px] tracking-tight">Déclic Informatique</div>
+                <div class="text-[11px] text-slate-500 font-semibold tracking-widest">MAINTENANCE • RÉPARATION • CONSEIL</div>
+            </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-1" aria-label="Navigation principale">
+            <a href="../index.html" class="px-3 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Accueil</a>
+            <a href="qui-suis-je.html" class="px-3 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Qui suis-je</a>
+            <a href="tarifs.html" class="px-3 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Tarifs</a>
+            <a href="contact.html" class="px-3 py-2 rounded-full font-semibold text-sm text-slate-600 hover:bg-slate-100">Contact</a>
+            <a href="avis.html" aria-current="page" class="px-3 py-2 rounded-full font-semibold text-sm bg-slate-900 text-white">Avis</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+            <a href="tel:+33743621860" class="hidden md:inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-2.5 rounded-full font-bold text-sm hover:bg-slate-50">📞 07 43 62 18 60</a>
+            <a href="contact.html" class="bg-yellow-400 text-slate-900 px-5 py-2.5 rounded-full font-bold text-sm hover:bg-yellow-500 transition-colors">Devis 20€</a>
+            <button id="burger" class="md:hidden p-2" type="button" aria-label="Ouvrir le menu" aria-controls="mobile" aria-expanded="false">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile" class="hidden md:hidden border-t bg-white px-4 py-3 space-y-1">
+        <a href="../index.html" class="block px-3 py-2 rounded">Accueil</a>
+        <a href="qui-suis-je.html" class="block px-3 py-2 rounded">Qui suis-je</a>
+        <a href="tarifs.html" class="block px-3 py-2 rounded">Tarifs</a>
+        <a href="contact.html" class="block px-3 py-2 rounded">Contact</a>
+        <a href="avis.html" class="block px-3 py-2 rounded bg-slate-100" aria-current="page">Avis clients</a>
+        <a href="tel:+33743621860" class="block px-3 py-2 rounded font-bold">📞 07 43 62 18 60</a>
+    </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 md:px-6">
+    <section class="pt-10 md:pt-14 pb-8">
+        <div class="inline-flex items-center gap-2 bg-violet-50 text-violet-700 px-3 py-1 rounded-full text-xs font-bold mono">● RETOURS CLIENTS • BOURGES</div>
+        <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">Les avis clients</h1>
+        <p class="mt-3 max-w-3xl text-slate-600 text-[16px] leading-relaxed">
+            Votre expérience compte. Consultez les retours des clients et partagez à votre tour votre avis sur une prestation de Déclic Informatique.
+        </p>
+
+        <div class="mt-6 bg-white border border-slate-200 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+                <div class="text-xs text-slate-500 mono">NOTE MOYENNE</div>
+                <div class="mt-1 flex items-center gap-3">
+                    <span id="averageRating" class="text-3xl font-extrabold">—</span>
+                    <span id="averageStars" class="rating-stars text-xl text-amber-500" aria-label="Note moyenne">☆☆☆☆☆</span>
+                </div>
+            </div>
+            <div class="sm:text-right">
+                <div id="reviewCount" class="font-bold text-slate-900">Chargement des avis…</div>
+                <div class="text-xs text-slate-500 mt-1">Avis publiés par les clients</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-12" aria-labelledby="reviewsHeading">
+        <div class="flex flex-wrap items-end justify-between gap-3">
+            <div>
+                <h2 id="reviewsHeading" class="font-extrabold text-2xl">Leurs expériences</h2>
+                <p class="mt-1 text-sm text-slate-500">Les avis les plus récents apparaissent en premier.</p>
+            </div>
+            <a href="#laisser-un-avis" class="text-sm font-bold text-violet-700 hover:text-violet-900">Laisser un avis ↓</a>
+        </div>
+
+        <div id="reviewsList" class="mt-5 grid md:grid-cols-2 gap-4" aria-live="polite">
+            <div class="md:col-span-2 bg-white border rounded-2xl p-6 text-sm text-slate-500">Chargement des avis clients…</div>
+        </div>
+        <div id="reviewLoadError" class="hidden mt-4 bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl text-sm" role="alert"></div>
+    </section>
+
+    <section id="laisser-un-avis" class="pb-14">
+        <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-8 items-start">
+            <div>
+                <h2 class="font-extrabold text-2xl">Vous avez fait appel à mes services ?</h2>
+                <p class="mt-3 text-slate-600 leading-relaxed">
+                    Quelques lignes suffisent pour aider les personnes qui cherchent un dépannage ou un conseil informatique à Bourges.
+                </p>
+                <div class="mt-5 bg-slate-900 rounded-2xl p-5 text-white">
+                    <div class="mono text-xs text-emerald-400">&gt; declic --merci --avis-client</div>
+                    <p class="mt-3 text-sm text-slate-300">Après l'envoi, votre avis est publié automatiquement sur cette page. Aucun compte ni adresse e-mail n'est demandé.</p>
+                </div>
+            </div>
+
+            <form id="reviewForm" class="bg-white border border-slate-200 rounded-2xl p-6 space-y-4">
+                <div>
+                    <label for="reviewName" class="block text-sm font-bold mb-2">Votre prénom ou pseudo</label>
+                    <input id="reviewName" name="nom" type="text" autocomplete="name" maxlength="50" required placeholder="Ex. : Sophie" class="border border-slate-200 rounded-xl px-4 py-3 w-full outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 transition-all">
+                </div>
+
+                <div>
+                    <label for="reviewRating" class="block text-sm font-bold mb-2">Votre note</label>
+                    <select id="reviewRating" name="note" required class="border border-slate-200 rounded-xl px-4 py-3 w-full outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 transition-all bg-white">
+                        <option value="">Choisir une note</option>
+                        <option value="5">★★★★★ — Excellent</option>
+                        <option value="4">★★★★☆ — Très bien</option>
+                        <option value="3">★★★☆☆ — Bien</option>
+                        <option value="2">★★☆☆☆ — Moyen</option>
+                        <option value="1">★☆☆☆☆ — Décevant</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="reviewService" class="block text-sm font-bold mb-2">Prestation concernée <span class="font-normal text-slate-400">(facultatif)</span></label>
+                    <select id="reviewService" name="prestation" class="border border-slate-200 rounded-xl px-4 py-3 w-full outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 transition-all bg-white">
+                        <option value="">Choisir une prestation (facultatif)</option>
+                        <option value="Dépannage informatique">Dépannage informatique</option>
+                        <option value="Montage PC">Montage PC</option>
+                        <option value="Maintenance">Maintenance</option>
+                        <option value="Conseil / achat">Conseil / achat</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="reviewComment" class="block text-sm font-bold mb-2">Votre commentaire</label>
+                    <textarea id="reviewComment" name="commentaire" rows="5" minlength="10" maxlength="1200" required placeholder="Racontez votre expérience…" class="border border-slate-200 rounded-xl px-4 py-3 w-full outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100 transition-all resize-y"></textarea>
+                    <div class="mt-1 text-xs text-slate-400">10 caractères minimum · 1 200 maximum</div>
+                </div>
+
+                <div class="hidden" aria-hidden="true">
+                    <label for="website">Ne pas remplir ce champ</label>
+                    <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+                </div>
+
+                <label class="flex items-start gap-3 text-sm text-slate-600">
+                    <input id="reviewConsent" name="consentement" type="checkbox" required class="mt-1 h-4 w-4 rounded border-slate-300 text-violet-600 focus:ring-violet-500">
+                    <span>Je confirme que cet avis concerne une expérience réelle et j'accepte sa publication sur le site sous le prénom ou pseudo indiqué.</span>
+                </label>
+
+                <button id="reviewSubmit" type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-slate-900 py-3 rounded-full font-bold transition-colors disabled:opacity-60 disabled:cursor-wait">Publier mon avis</button>
+                <div id="reviewSuccess" class="hidden bg-green-50 border border-green-200 text-green-700 p-4 rounded-xl text-sm font-medium" role="status" aria-live="polite"></div>
+                <div id="reviewError" class="hidden bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl text-sm font-medium" role="alert" aria-live="assertive"></div>
+                <p class="text-xs text-slate-400 leading-relaxed">Ne publiez pas de numéro de téléphone, d'adresse ou d'autres informations personnelles dans votre commentaire. Les avis sont visibles publiquement.</p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="border-t bg-white mt-4">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 py-8 grid md:grid-cols-[1.5fr_1fr_1.5fr] gap-6 text-sm">
+        <div>
+            <img src="../assets/images/logo-declic.png" class="h-10 mb-3" alt="Logo Déclic Informatique">
+            <div class="font-bold">Déclic Informatique</div>
+            <div class="text-xs text-slate-500">Maintenance • Réparation • Conseil</div>
+            <div class="mt-3 text-slate-600">Basé à <b>Bourges (18000)</b> - Cher.<br>Déplacement à domicile.</div>
+        </div>
+        <div>
+            <div class="font-bold">Zone & mode</div>
+            <div class="mt-2 text-slate-600 text-xs leading-relaxed">Bourges et alentours.<br><br>Déplacement uniquement à domicile.<br>Bourges 0€ - Alentours 5€</div>
+        </div>
+        <div>
+            <div class="font-bold">Contact</div>
+            <div class="mt-2 text-slate-600 text-xs mb-3">
+                <a href="tel:+33743621860" class="font-bold text-slate-900 hover:text-violet-600">📞 07 43 62 18 60</a><br>
+                💳 Espèces • PayPal<br>🕘 Lun-Sam 9h-19h
+            </div>
+            <img src="../assets/images/qr-whatsapp.png" class="w-20 rounded-xl border" alt="WhatsApp">
+            <div class="text-[10px] text-slate-400 mt-1">WhatsApp</div>
+        </div>
+    </div>
+    <div class="border-t text-center py-4 text-xs text-slate-400 mono">© 2026 Déclic Informatique - Bourges</div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/avis.js"></script>
+</body>
+</html>
